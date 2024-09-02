@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "ZdravkoHr",
+  "risk": "3",
+  "title": "Starknet messages can be executed multiple times",
+  "issueId": 6,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/6"
+}
