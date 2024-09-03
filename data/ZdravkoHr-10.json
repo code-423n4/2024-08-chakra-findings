@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "ZdravkoHr",
+  "risk": "2",
+  "title": "Settlements can be initiated with invalid arguments",
+  "issueId": 10,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/10"
+}
