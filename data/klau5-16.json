@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "Settlement.receive_cross_chain_callback always fails on Starknet",
+  "issueId": 16,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/16"
+}
