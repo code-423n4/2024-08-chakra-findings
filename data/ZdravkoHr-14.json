@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "ZdravkoHr",
+  "risk": "2",
+  "title": "Callbacks are not properly handled on Starknet",
+  "issueId": 14,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/14"
+}
