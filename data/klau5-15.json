@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "Unable to receive tokens on the destination chain or store results on the source chain due to mishandling of signatures",
+  "issueId": 15,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/15"
+}
