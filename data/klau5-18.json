@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "A single validator can steal tokens due to lack of duplicate signature checking",
+  "issueId": 18,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/18"
+}
