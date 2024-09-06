@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "gesha17",
+  "risk": "3",
+  "title": "Nonce managers in Settlement and Handler contracts can become out of sync resulting in reverting callbacks",
+  "issueId": 24,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/24"
+}
