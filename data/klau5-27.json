@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "Signature replay attack is possible in receive_cross_chain_msg due to lack of toChain verification, allowing token theft",
+  "issueId": 27,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/27"
+}
