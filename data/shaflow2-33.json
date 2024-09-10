@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "shaflow2",
+  "risk": "2",
+  "title": "A handler cannot handle situations where multiple chains are facing different modes",
+  "issueId": 33,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/33"
+}
