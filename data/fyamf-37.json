@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "3",
+  "title": "Changing a user's nonce to either burn the wrong amount of tokens during a callback or to stop the callback message from being executed in EVM-based blockchains",
+  "issueId": 37,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/37"
+}
