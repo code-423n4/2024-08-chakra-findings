@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "2",
+  "title": "Incorrect signature verification according to ERC-191",
+  "issueId": 32,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/32"
+}
