@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "Unable to handle failure when Handler.receive_cross_chain_msg reverts",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/43"
+}
