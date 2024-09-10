@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "3",
+  "title": "Forcing the failure of callback message by manipulating `from_chain`",
+  "issueId": 34,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/34"
+}
