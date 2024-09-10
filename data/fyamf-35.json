@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "3",
+  "title": "Duplicate signature attack to bypass the condition of minimum required_validators in EVM-based blockchains",
+  "issueId": 35,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/35"
+}
