@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "3",
+  "title": "Missing handling of `cross_chain_msg_status` in `handler_erc20::receive_cross_chain_callback` leads to critical issue",
+  "issueId": 48,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/48"
+}
