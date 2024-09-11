@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "mojito_auditor",
+  "risk": "2",
+  "title": "Solidity `cross_chain_erc20_settlement()` does not check `handler_whitelist[to_chain][to_handler] == true`",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/67"
+}
