@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "The use of an unverified payload_type parameter allows manipulation of PayloadType",
+  "issueId": 70,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/70"
+}
