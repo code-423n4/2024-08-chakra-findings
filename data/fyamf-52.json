@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "fyamf",
+  "risk": "2",
+  "title": "Potential DoS attack due to lack of fees for cross-chain message processing",
+  "issueId": 52,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/52"
+}
