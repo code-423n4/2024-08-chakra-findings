@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "mojito_auditor",
+  "risk": "3",
+  "title": "One validator could bypass the `required_validators_num` check because of not checking for duplicate signature/signers",
+  "issueId": 61,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/61"
+}
