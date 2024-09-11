@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "mojito_auditor",
+  "risk": "2",
+  "title": "Function `handler_erc20.receive_cross_chain_callback()` in Cairo set incorrect `tx_status` ",
+  "issueId": 59,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/59"
+}
