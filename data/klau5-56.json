@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "Mismatch between the settlement and the nonce in handler_erc20 could cause the receive_cross_chain_callback to fail for all users on Starknet",
+  "issueId": 56,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/56"
+}
