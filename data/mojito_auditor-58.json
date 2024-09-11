@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "mojito_auditor",
+  "risk": "3",
+  "title": "Replay attack allows attacker to call `receive_cross_chain_msg()` and `receive_cross_chain_callback()` on different chains",
+  "issueId": 58,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/58"
+}
