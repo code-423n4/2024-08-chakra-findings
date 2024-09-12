@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Cross-chain ERC20 settlement initiated on source chain under `LockUnlock` or `BurnUnlock` mode can remain not completed on destination chain",
+  "issueId": 125,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/125"
+}
