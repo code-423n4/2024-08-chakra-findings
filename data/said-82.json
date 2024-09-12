@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "3",
+  "title": "Solidity's `SettlementSignatureVerifier.verify` does not check for duplicate signatures from the same validator, enabling malicious Settlement execution.",
+  "issueId": 82,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/82"
+}
