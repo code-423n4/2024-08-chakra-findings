@@ -44,3 +44,55 @@ struct Message {
     bytes payload;
 }
 ```
+
+## [QA-3] Consider writing PENDING status of the `received_tx` in the settlement before calling the handler.
+```rust
+        fn receive_cross_chain_msg(
+            ref self: ContractState,
+            cross_chain_msg_id: u256,
+            from_chain: felt252,
+            to_chain: felt252,
+            from_handler: u256,
+            to_handler: ContractAddress,
+            sign_type: u8,
+            signatures: Array<(felt252, felt252, bool)>,
+            payload: Array<u8>,
+            payload_type: u8,
+        ) -> bool {
+            assert(to_chain == self.chain_name.read(), 'error to_chain');
+
+            // verify signatures
+            let mut message_hash: felt252 = LegacyHash::hash(from_chain, (cross_chain_msg_id, to_chain, from_handler, to_handler));
+            let payload_span = payload.span();
+            let mut i = 0;
+            loop {
+                if i > payload_span.len()-1{
+                    break;
+                }
+                message_hash = LegacyHash::hash(message_hash, * payload_span.at(i));
+                i += 1;
+            };
+            self.check_chakra_signatures(message_hash, signatures);
+
+            // call handler receive_cross_chain_msg
+            let handler = IHandlerDispatcher{contract_address: to_handler};
+            let success = handler.receive_cross_chain_msg(cross_chain_msg_id, from_chain, to_chain, from_handler, to_handler , payload);
+
+            let mut status = CrossChainMsgStatus::SUCCESS;
+            if success{
+                status = CrossChainMsgStatus::SUCCESS;
+            }else{
+                status = CrossChainMsgStatus::FAILED;
+            }
+
+            self.received_tx.write(cross_chain_msg_id, ReceivedTx{
+                tx_id:cross_chain_msg_id,
+                from_chain: from_chain,
+                from_handler: from_handler,
+                to_chain: to_chain,
+                to_handler: to_handler,
+                tx_status: status
+            });
+```
+
+Consider writing PENDING status of the `received_tx` in the settlement before calling the `handler.receive_cross_chain_msg`
