@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "Shaheen",
+  "risk": "2",
+  "title": "A Malicious User Can Frontrun `remove_handler` to cause a Griefing Attack in `MintBurn` mode",
+  "issueId": 98,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/98"
+}
