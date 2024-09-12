@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "rbserver",
+  "risk": "3",
+  "title": "There is no refund mechanism in `ChakraSettlement.processCrossChainCallback` or `ChakraSettlementHandler.receive_cross_chain_callback` function",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/115"
+}
