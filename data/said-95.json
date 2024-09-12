@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "2",
+  "title": "Users will lose their funds if the cross-chain request is settled with a `Failed` status.",
+  "issueId": 95,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/95"
+}
