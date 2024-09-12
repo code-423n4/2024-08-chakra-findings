@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "The PENDING status is not written to the `received_tx` is in the settlement before calling the handler in Cairo",
+  "issueId": 126,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/126"
+}
