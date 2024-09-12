@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "shaflow2",
+  "risk": "3",
+  "title": "Malicious actors can cause the Cairo program to fail in executing cross-chain messages properly.",
+  "issueId": 81,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/81"
+}
