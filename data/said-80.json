@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "2",
+  "title": "The method Id is not checked on the EVM-based `ChakraSettlementHandler` and assumes all operations are `Transfer`.",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/80"
+}
