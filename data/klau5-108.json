@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "Token theft is possible in Starknet through replay attack to receive_cross_chain_msg",
+  "issueId": 108,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/108"
+}
