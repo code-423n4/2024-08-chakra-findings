@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "shaflow2",
+  "risk": "3",
+  "title": "Multiple signatures can be bypassed in Cairo",
+  "issueId": 75,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/75"
+}
