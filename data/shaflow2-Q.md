@@ -13,7 +13,7 @@
 | 07        | The receive_cross_chain_msg function will never return false                 |
 | 08         | The receive_cross_chain_callback will not return false                      |
 | 09 | Improper Manager Permission Control|
-
+| 10   |  Reorganization on the StartNet Chain May Cause Abnormal Cross-Chain Message States                                 |
 
 
 ## [01] The CreatedCrossChainTx parameter is stored incorrectly
@@ -664,4 +664,18 @@ This issue means that if a manager adds a malicious manager, this malicious mana
 ```
 
 ### Recommendation
-Assign the authority to add and remove managers to a higher-level owner rather than to peers at the same manager level  
+Assign the authority to add and remove managers to a higher-level owner rather than to peers at the same manager level 
+
+## [10] Reorganization on the StartNet Chain May Cause Abnormal Cross-Chain Message States
+### Link
+github:[https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/cairo/handler/src/handler_erc20.cairo#L183](https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/cairo/handler/src/handler_erc20.cairo#L183)
+### Describe
+Due to the txid calculation in the Cairo program relying on both the transaction hash and the respective stored counter, chain reorganizations can cause changes in these parameters. This may result in a different txid being computed compared to the original one. When the message callback on the target chain occurs, discrepancies in the txid can affect the protocol's expected behavior. For instance, in MintAndBurn mode, tokens may not be burned as intended.
+```rust
+            let tx_id = LegacyHash::hash(get_tx_info().unbox().transaction_hash, self.msg_count.read());
+```
+```rust
+            let cross_chain_settlement_id = LegacyHash::hash(get_tx_info().unbox().transaction_hash, self.tx_count.read());
+```
+### Recommendation
+It is recommended to avoid using global counters and transaction information to calculate txid.
