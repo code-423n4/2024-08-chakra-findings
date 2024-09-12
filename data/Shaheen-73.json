@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "Shaheen",
+  "risk": "3",
+  "title": "`check_chakra_signatures` can get bypassed which will allow attackers to mint unlimited tokens",
+  "issueId": 73,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/73"
+}
