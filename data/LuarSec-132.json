@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "LuarSec",
+  "risk": "2",
+  "title": "(Cairo) The same signature from a single validator can be re-used to bypass the `required_validators_num` check",
+  "issueId": 132,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/132"
+}
