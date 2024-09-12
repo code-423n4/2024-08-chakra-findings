@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "shaflow2",
+  "risk": "2",
+  "title": "In Cairo, lack of a specific token refund mechanism after cross-chain message execution fails",
+  "issueId": 94,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/94"
+}
