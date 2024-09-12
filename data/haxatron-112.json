@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "Invariant Violation: Zero amount can be sent in Starknet",
+  "issueId": 112,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/112"
+}
