@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Message hashes for signatures for calling `ChakraSettlement.receive_cross_chain_msg` and `ChakraSettlement.verifySignature` functions do not encode necessary EIP-712's `domainSeparator` data like `name`, `version`, `chainId`, and `verifyingContract`, which can cause corresponding signatures to be misused",
+  "issueId": 123,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/123"
+}
