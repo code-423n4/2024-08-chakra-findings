@@ -20,3 +20,27 @@ Consider allow specifying an array of managers in the `initialize` function to g
         required_validators = _required_validators;
     }
 ```
+
+## [QA-2] Incorrect type during decoding of `_msg.id`
+
+In `MessageV1Codec.sol`, an incorrect type of `uint64` is used when decoding `id` from the payload.
+
+```solidity
+    function id(bytes calldata _msg) internal pure returns (uint64) {
+        return uint64(bytes8(_msg[ID_OFFSET:PAYLOAD_TYPE_OFFSET]));
+    }
+```
+
+The correct type is `uint256` as per the struct:
+
+```solidity
+// The Message struct defines the message of corss chain
+struct Message {
+    // The id of the message
+    uint256 id;
+    // The type of the payload
+    PayloadType payload_type;
+    // The payload of the message
+    bytes payload;
+}
+```
