@@ -96,3 +96,65 @@ struct Message {
 ```
 
 Consider writing PENDING status of the `received_tx` in the settlement before calling the `handler.receive_cross_chain_msg`
+
+[QA-4]: Incorrect `from_address` can be emitted by the `CrossChainResult` event
+
+In the `CrossChainResult` event, an incorrect `from_address` can be emitted. This is because `get_tx_info().unbox().account_contract_address` is equivalent to `tx.origin`
+
+
+What this means is that it is possible for another user to provide the required signatures for the `receive_cross_chain_callback`, such that the `get_tx_info().unbox().account_contract_address` is no longer the true `from_address` of the initial `created_tx`.
+
+The solution is to use the initial saved `from_address` in the `created_tx` mapping
+
+```rust
+       fn receive_cross_chain_callback(
+            ref self: ContractState,
+            cross_chain_msg_id: felt252,
+            from_chain: felt252,
+            to_chain: felt252,
+            from_handler: u256,
+            to_handler: ContractAddress,
+            cross_chain_msg_status: u8,
+            sign_type: u8,
+            signatures: Array<(felt252, felt252, bool)>,
+        ) -> bool {
+            assert(self.created_tx.read(cross_chain_msg_id).tx_id == cross_chain_msg_id, 'message id error');
+            assert(self.created_tx.read(cross_chain_msg_id).from_chain == to_chain, 'from_chain error');
+            assert(self.created_tx.read(cross_chain_msg_id).to_chain == from_chain, 'to_chain error');
+            assert(self.created_tx.read(cross_chain_msg_id).from_handler == to_handler, 'from_handler error');
+            assert(self.created_tx.read(cross_chain_msg_id).to_handler == from_handler, 'to_handler error');
+            assert(self.created_tx.read(cross_chain_msg_id).tx_status == CrossChainMsgStatus::PENDING, 'tx status error');
+
+            let mut message_hash_temp: felt252 = LegacyHash::hash(from_chain, (cross_chain_msg_id, to_chain, from_handler, to_handler));
+            let message_hash_final:felt252 = LegacyHash::hash(message_hash_temp, cross_chain_msg_status);
+            self.check_chakra_signatures(message_hash_final, signatures);
+            let handler = IHandlerDispatcher{contract_address: to_handler};
+            let success = handler.receive_cross_chain_callback(cross_chain_msg_id, from_chain, to_chain, from_handler, to_handler , cross_chain_msg_status);
+            let mut state = CrossChainMsgStatus::PENDING;
+            if success{
+                state = CrossChainMsgStatus::SUCCESS;
+            }else{
+                state = CrossChainMsgStatus::FAILED;
+            }
+            
+            self.created_tx.write(cross_chain_msg_id, CreatedTx{
+                tx_id:cross_chain_msg_id,
+                tx_status:state,
+                from_chain: to_chain,
+                to_chain: from_chain,
+                from_handler: to_handler,
+                to_handler: from_handler
+            });
+
+            self.emit(CrossChainResult {
+                cross_chain_settlement_id: cross_chain_msg_id,
+=>              from_address: get_tx_info().unbox().account_contract_address,
+                from_chain: to_chain,
+                from_handler: to_handler,
+                to_chain: from_chain,
+                to_handler: from_handler,
+                cross_chain_msg_status: state,
+            });
+            return true;
+        }
+```
