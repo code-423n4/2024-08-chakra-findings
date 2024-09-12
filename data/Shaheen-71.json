@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "Shaheen",
+  "risk": "3",
+  "title": "`receive_cross_chain_msg` function doesn't check the `tx_status` which will allow Signature Replay Attacks, allowing attackers to mint unlimited tokens",
+  "issueId": 71,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/71"
+}
