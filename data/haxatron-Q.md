@@ -97,7 +97,7 @@ struct Message {
 
 Consider writing PENDING status of the `received_tx` in the settlement before calling the `handler.receive_cross_chain_msg`
 
-[QA-4]: Incorrect `from_address` can be emitted by the `CrossChainResult` event
+## [QA-4]: Incorrect `from_address` can be emitted by the `CrossChainResult` event
 
 In the `CrossChainResult` event, an incorrect `from_address` can be emitted. This is because `get_tx_info().unbox().account_contract_address` is equivalent to `tx.origin`
 
@@ -165,7 +165,7 @@ The Cairo Settlement does not rely on an external signature verifier contract wh
 
 > The contract relies on an external signature verifier (signature_verifier) for validating signatures.
 
-[QA-6]: The Cairo Settlement and SettlementHandler do not key the nonce by sender.
+## [QA-6]: The Cairo Settlement and SettlementHandler do not key the nonce by sender.
 
 Breaking the two invariants:
 
@@ -185,7 +185,7 @@ Instead the nonce is tracked globally in `self.tx_count` variable.
             ...
             self.tx_count.write(self.tx_count.read()+1);
 ```
-[QA-7]: Consider only allowing registered handlers to call `send_cross_chain_msg`
+## [QA-7]: Consider only allowing registered handlers to call `send_cross_chain_msg`
 
 Consider only allowing registered handlers to call `send_cross_chain_msg` as there is currently no access control for both Starknet and EVM chains, the only impact is incrementing the nonce of a user which has no other impact.
 
@@ -199,3 +199,17 @@ Consider only allowing registered handlers to call `send_cross_chain_msg` as the
     ) external {
         nonce_manager[from_address] += 1;
 ```
+
+## [QA-8]: Consider removing the `to_handler` checks in the Cairo SettlementHandler
+```rust
+        fn receive_cross_chain_callback(ref self: ContractState, cross_chain_msg_id: felt252, from_chain: felt252, to_chain: felt252,
+        from_handler: u256, to_handler: ContractAddress, cross_chain_msg_status: u8) -> bool{
+            assert(to_handler == get_contract_address(),'error to_handler');
+
+            assert(self.settlement_address.read() == get_caller_address(), 'not settlement');
+
+            assert(self.support_handler.read((from_chain, from_handler)) && 
+                    self.support_handler.read((to_chain, contract_address_to_u256(to_handler))), 'not support handler');
+```
+
+Consider removing the `to_handler` checks in the Cairo SettlementHandler and if the admin misconfigures by forgetting the add the `to_chain` and the `to_handler` into the whitelist the cross-chain transaction will fail.
