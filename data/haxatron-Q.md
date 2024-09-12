@@ -158,3 +158,9 @@ The solution is to use the initial saved `from_address` in the `created_tx` mapp
             return true;
         }
 ```
+
+[QA-6]: The Cairo Settlement does not rely on an external signature verifier
+
+The Cairo Settlement does not rely on an external signature verifier contract which breaks the invariant:
+
+> The contract relies on an external signature verifier (signature_verifier) for validating signatures.
