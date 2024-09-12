@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "Shaheen",
+  "risk": "3",
+  "title": "handler's `receive_cross_chain_callback()` will always set the tx_status to `SETTLED` even when the msg fails",
+  "issueId": 84,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/84"
+}
