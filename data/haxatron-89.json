@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "Lack of `chain ID` in the destination chain can lead to signature replay in specific circumstances",
+  "issueId": 89,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/89"
+}
