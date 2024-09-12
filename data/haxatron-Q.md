@@ -164,3 +164,38 @@ The solution is to use the initial saved `from_address` in the `created_tx` mapp
 The Cairo Settlement does not rely on an external signature verifier contract which breaks the invariant:
 
 > The contract relies on an external signature verifier (signature_verifier) for validating signatures.
+
+[QA-7]: The Cairo Settlement and SettlementHandler do not key the nonce by sender.
+
+Breaking the two invariants:
+
+> The nonce for each sender is incremented with each cross-chain transaction to ensure uniqueness of transaction IDs.
+
+> The nonce for each from_address is incremented for every new cross-chain message sent, ensuring uniqueness of transactions.
+
+Instead the nonce is tracked globally in `self.tx_count` variable.
+
+```
+        fn send_cross_chain_msg(
+            ref self: ContractState, to_chain: felt252, to_handler: u256, payload_type :u8,payload: Array<u8>,
+        ) -> felt252 {
+            let from_handler = get_caller_address();
+            let from_chain = self.chain_name.read();
+            let cross_chain_settlement_id = LegacyHash::hash(get_tx_info().unbox().transaction_hash, self.tx_count.read());
+            ...
+            self.tx_count.write(self.tx_count.read()+1);
+```
+[QA-8]: Consider only allowing registered handlers to call `send_cross_chain_msg`
+
+Consider only allowing registered handlers to call `send_cross_chain_msg` as there is currently no access control for both Starknet and EVM chains, the only impact is incrementing the nonce of a user which has no other impact.
+
+```solidity
+    function send_cross_chain_msg(
+        string memory to_chain,
+        address from_address,
+        uint256 to_handler,
+        PayloadType payload_type,
+        bytes calldata payload
+    ) external {
+        nonce_manager[from_address] += 1;
+```
