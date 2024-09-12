@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "3",
+  "title": "`settlement.cairo`'s `check_chakra_signatures` does not check for duplicate signatures from the same validator, enabling malicious Settlement execution.",
+  "issueId": 87,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/87"
+}
