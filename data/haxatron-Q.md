@@ -159,13 +159,13 @@ The solution is to use the initial saved `from_address` in the `created_tx` mapp
         }
 ```
 
-[QA-6]: The Cairo Settlement does not rely on an external signature verifier
+[QA-5]: The Cairo Settlement does not rely on an external signature verifier
 
 The Cairo Settlement does not rely on an external signature verifier contract which breaks the invariant:
 
 > The contract relies on an external signature verifier (signature_verifier) for validating signatures.
 
-[QA-7]: The Cairo Settlement and SettlementHandler do not key the nonce by sender.
+[QA-6]: The Cairo Settlement and SettlementHandler do not key the nonce by sender.
 
 Breaking the two invariants:
 
@@ -185,7 +185,7 @@ Instead the nonce is tracked globally in `self.tx_count` variable.
             ...
             self.tx_count.write(self.tx_count.read()+1);
 ```
-[QA-8]: Consider only allowing registered handlers to call `send_cross_chain_msg`
+[QA-7]: Consider only allowing registered handlers to call `send_cross_chain_msg`
 
 Consider only allowing registered handlers to call `send_cross_chain_msg` as there is currently no access control for both Starknet and EVM chains, the only impact is incrementing the nonce of a user which has no other impact.
 
