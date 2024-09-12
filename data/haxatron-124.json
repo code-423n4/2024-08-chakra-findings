@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "SettlementHandler does not implement IERC777Recipient interface",
+  "issueId": 124,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/124"
+}
