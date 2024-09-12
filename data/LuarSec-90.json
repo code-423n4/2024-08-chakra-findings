@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "LuarSec",
+  "risk": "3",
+  "title": "Insecure nonce management allows attackers to permanently cause cross-chain callbacks to revert",
+  "issueId": 90,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/90"
+}
