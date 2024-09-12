@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "JanuaryPersimmon2024",
+  "risk": "3",
+  "title": "The required_validators check can be bypassed in the `SettlementSignatureVerifier` contract because neither the `verifyECDSA` nor the ChakraSettlement's functions check that signatures are unique",
+  "issueId": 111,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/111"
+}
