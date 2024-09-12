@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "2",
+  "title": "Inconsistent settlement status handling between the EVM handler and the StarkNet handler.",
+  "issueId": 99,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/99"
+}
