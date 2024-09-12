@@ -1,0 +1,8 @@
+{
+  "contest": 432,
+  "handle": "said",
+  "risk": "2",
+  "title": "An attacker can perform a DoS attack on the Chakra Network by providing a large payload to the `send_cross_chain_msg` function.",
+  "issueId": 109,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/109"
+}
