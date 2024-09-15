@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "AllTooWell",
+  "risk": "3",
+  "title": "receive_cross_chain_msg on Starknet can be called many times with one valid input",
+  "issueId": 432,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/432",
+  "originalIssueId": 240,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/240"
+}
