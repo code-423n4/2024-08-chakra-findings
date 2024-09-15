@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "pwnforce",
+  "risk": "3",
+  "title": "Invalid settlement handlers can process received cross-chain messages",
+  "issueId": 161,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/161",
+  "originalIssueId": 288,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/288"
+}
