@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Respx",
+  "risk": "2",
+  "title": "Tokens Remain Locked Or Burned If Cross Chain Callbacks Fail (Cairo and Solidity)",
+  "issueId": 249,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/249",
+  "originalIssueId": 599,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/599"
+}
