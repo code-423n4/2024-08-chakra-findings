@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "0xDemon",
+  "risk": "2",
+  "title": "Missing `disableinitializers()` in constructor can lead to malicious takeover of the implementation contract",
+  "issueId": 259,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/259",
+  "originalIssueId": 583,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/583"
+}
