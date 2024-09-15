@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "Incorrect logic can cause slicing to exceed the intended bounds",
+  "issueId": 408,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/408",
+  "originalIssueId": 308,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/308"
+}
