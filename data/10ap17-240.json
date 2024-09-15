@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "10ap17",
+  "risk": "2",
+  "title": "Duplicate Validator signatures bypass multi-signature validation",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/240",
+  "originalIssueId": 617,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/617"
+}
