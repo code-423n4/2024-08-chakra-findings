@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "`MANAGER_ROLE` is managed inconsistently within the protocol.",
+  "issueId": 483,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/483",
+  "originalIssueId": 134,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/134"
+}
