@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "Role Is Not Being Transferred Along With Ownership Transfer",
+  "issueId": 257,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/257",
+  "originalIssueId": 587,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/587"
+}
