@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "3",
+  "title": "Anybody can call TokenRoles_init()",
+  "issueId": 509,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/509",
+  "originalIssueId": 71,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/71"
+}
