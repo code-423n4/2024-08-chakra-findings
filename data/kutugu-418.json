@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "kutugu",
+  "risk": "3",
+  "title": "The signatureVerifier does not detect whether the validators or signatures is duplicated.",
+  "issueId": 418,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/418",
+  "originalIssueId": 290,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/290"
+}
