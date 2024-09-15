@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "agent3bood",
+  "risk": "3",
+  "title": "Invalid protocol invariant when validating Starknet addresses",
+  "issueId": 209,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/209",
+  "originalIssueId": 673,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/673"
+}
