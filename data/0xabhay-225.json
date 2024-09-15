@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "0xabhay",
+  "risk": "3",
+  "title": "Unauthorized Nonce Manipulation in Cross-Chain Transactions Causing txid Mismatch and Token Supply Risks",
+  "issueId": 225,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/225",
+  "originalIssueId": 642,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/642"
+}
