@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "atoko",
+  "risk": "2",
+  "title": "Lack of Handler Whitelist Validation in cross_chain_erc20_settlement Function",
+  "issueId": 421,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/421",
+  "originalIssueId": 280,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/280"
+}
