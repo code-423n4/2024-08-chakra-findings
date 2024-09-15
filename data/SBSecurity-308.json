@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "SBSecurity",
+  "risk": "2",
+  "title": "Only admin should add/remove managers",
+  "issueId": 308,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/308",
+  "originalIssueId": 496,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/496"
+}
