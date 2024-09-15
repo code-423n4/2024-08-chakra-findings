@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "bhilare_",
+  "risk": "2",
+  "title": "A single validator can pass its own signature , `required_validators` number of times, to bypass the requirement, which is not intended by the design.",
+  "issueId": 341,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/341",
+  "originalIssueId": 432,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/432"
+}
