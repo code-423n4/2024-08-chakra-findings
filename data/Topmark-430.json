@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Topmark",
+  "risk": "2",
+  "title": "Contract Validator Inconsistency During Update in Base Settlement",
+  "issueId": 430,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/430",
+  "originalIssueId": 245,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/245"
+}
