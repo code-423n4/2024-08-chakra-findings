@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "jesjupyter",
+  "risk": "3",
+  "title": "No Refunding When the Operation Fails",
+  "issueId": 262,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/262",
+  "originalIssueId": 573,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/573"
+}
