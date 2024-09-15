@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Omik",
+  "risk": "3",
+  "title": "toAddress() truncation casting",
+  "issueId": 236,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/236",
+  "originalIssueId": 623,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/623"
+}
