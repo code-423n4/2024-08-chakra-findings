@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "Received tx can never be set to FAILED status on Starknet",
+  "issueId": 170,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/170",
+  "originalIssueId": 131,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/131"
+}
