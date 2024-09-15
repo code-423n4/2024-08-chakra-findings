@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Coinymous",
+  "risk": "2",
+  "title": "Lack of Destination Chain Influence in `ChakraSettlement::receive_cross_chain_msg` Signature Input Enables Cross-Chain Attack",
+  "issueId": 360,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/360",
+  "originalIssueId": 398,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/398"
+}
