@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "mjcpwns",
+  "risk": "3",
+  "title": "Lack of withdraw or pull mechanism causes funds to be stuck ",
+  "issueId": 438,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/438",
+  "originalIssueId": 229,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/229"
+}
