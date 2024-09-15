@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "gajiknownnothing",
+  "risk": "2",
+  "title": "Manipulation of cross-chain transaction status via unverified `from_chain` parameter",
+  "issueId": 529,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/529",
+  "originalIssueId": 29,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/29"
+}
