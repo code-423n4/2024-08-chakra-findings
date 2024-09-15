@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Draiakoo",
+  "risk": "2",
+  "title": "Constructor will not be executed when a Cairo contract will be upgraded",
+  "issueId": 290,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/290",
+  "originalIssueId": 530,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/530"
+}
