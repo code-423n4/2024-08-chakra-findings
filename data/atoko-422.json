@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "atoko",
+  "risk": "2",
+  "title": "Lack of Validation for payload and payload_type ",
+  "issueId": 422,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/422",
+  "originalIssueId": 276,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/276"
+}
