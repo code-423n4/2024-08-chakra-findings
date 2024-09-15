@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "jasonxiale",
+  "risk": "3",
+  "title": "signatures can be abused to bypass validating",
+  "issueId": 390,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/390",
+  "originalIssueId": 346,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/346"
+}
