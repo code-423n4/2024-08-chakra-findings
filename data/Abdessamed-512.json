@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Abdessamed",
+  "risk": "3",
+  "title": "Improper access control on Cairo contracts for manager management",
+  "issueId": 512,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/512",
+  "originalIssueId": 67,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/67"
+}
