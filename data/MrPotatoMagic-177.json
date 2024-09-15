@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Users would be minted more tokens on the destination chain when ChakraToken decimals are different",
+  "issueId": 177,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/177",
+  "originalIssueId": 731,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/731"
+}
