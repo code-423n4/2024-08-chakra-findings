@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "0x37",
+  "risk": "3",
+  "title": "required_validators limitation may be bypassed by malicious validators",
+  "issueId": 459,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/459",
+  "originalIssueId": 197,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/197"
+}
