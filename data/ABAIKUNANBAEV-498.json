@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "There is no nonce increase in the handler_erc20",
+  "issueId": 498,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/498",
+  "originalIssueId": 103,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/103"
+}
