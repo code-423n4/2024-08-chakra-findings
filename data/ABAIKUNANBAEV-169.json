@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "2",
+  "title": "Incorrect checking of supported handler on Starknet",
+  "issueId": 169,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/169",
+  "originalIssueId": 136,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/136"
+}
