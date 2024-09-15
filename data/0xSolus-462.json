@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "0xSolus",
+  "risk": "3",
+  "title": "Transaction Front-running can cause funds to be lost/locked on origin chain.",
+  "issueId": 462,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/462",
+  "originalIssueId": 190,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/190"
+}
