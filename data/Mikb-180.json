@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Mikb",
+  "risk": "3",
+  "title": "Cross-Chain Replay Attacks Due to Absence of Chain ID",
+  "issueId": 180,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/180",
+  "originalIssueId": 725,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/725"
+}
