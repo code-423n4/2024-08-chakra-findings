@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "arabgodx",
+  "risk": "2",
+  "title": "arbitrary bad actor can invoke the initialiser and claim ownership ",
+  "issueId": 323,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/323",
+  "originalIssueId": 471,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/471"
+}
