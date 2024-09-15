@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "yudan",
+  "risk": "3",
+  "title": "The verify logic missing check if the validator is already used when verifying signatures",
+  "issueId": 401,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/401",
+  "originalIssueId": 321,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/321"
+}
