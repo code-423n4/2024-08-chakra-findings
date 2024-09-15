@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Abdessamed",
+  "risk": "3",
+  "title": "Cairo settlement contract does not check if the cross-chain message was already received on `receive_cross_chain_msg` which allows malicious users to drain the protocol funds",
+  "issueId": 513,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/513",
+  "originalIssueId": 64,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/64"
+}
