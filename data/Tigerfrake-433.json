@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "Insufficient `signatures` validation may result in bypassing the intended multi-validator requirement.",
+  "issueId": 433,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/433",
+  "originalIssueId": 239,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/239"
+}
