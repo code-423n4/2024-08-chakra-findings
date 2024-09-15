@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "Inconsistent Handling of `MintBurn` and `BurnUnlock`",
+  "issueId": 266,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/266",
+  "originalIssueId": 566,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/566"
+}
