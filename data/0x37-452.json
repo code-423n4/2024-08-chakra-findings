@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "0x37",
+  "risk": "3",
+  "title": "signature replay in cario receive_cross_chain_msg",
+  "issueId": 452,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/452",
+  "originalIssueId": 206,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/206"
+}
