@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "peanuts",
+  "risk": "2",
+  "title": "Managers in the cairo contracts can DoS the whole protocol",
+  "issueId": 282,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/282",
+  "originalIssueId": 543,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/543"
+}
