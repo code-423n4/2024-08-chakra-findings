@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Trooper",
+  "risk": "3",
+  "title": "ChakraSettlementHandler.sol and handler_erc20.cairo do not return tokens for failed transactions",
+  "issueId": 400,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/400",
+  "originalIssueId": 322,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/322"
+}
