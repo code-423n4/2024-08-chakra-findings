@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Bauchibred",
+  "risk": "3",
+  "title": "Cross chain messages and callbacks would be processed even with insufficient signatures",
+  "issueId": 211,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/211",
+  "originalIssueId": 669,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/669"
+}
