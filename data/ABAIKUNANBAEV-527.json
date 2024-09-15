@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "ABAIKUNANBAEV",
+  "risk": "3",
+  "title": "Mint / Burn mode is incorrectly handled",
+  "issueId": 527,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/527",
+  "originalIssueId": 31,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/31"
+}
