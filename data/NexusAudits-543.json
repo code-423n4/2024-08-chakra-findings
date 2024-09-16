@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "NexusAudits",
+  "risk": "Q",
+  "title": "QA Report",
+  "issueId": 543,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/543",
+  "originalIssueId": 692,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/692"
+}
