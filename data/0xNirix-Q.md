@@ -1,0 +1,33 @@
+1. Missing Validation for `to_chain` Parameter in `cross_chain_erc20_settlement`: Users can call cross_chain_erc20_settlement with empty or null to_chain. All other input params are being checked for non-zero values.
+https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/ChakraSettlementHandler.sol#L118-L121
+
+
+2. Inconsistent Validator Management: The `add_validator` and `remove_validator` functions in BaseSettlement interact with the signature_verifier, but `set_required_validators_num` does not update the verifier, creating an inconsistency in how validator-related state is managed across contracts and potentially causing partial updates to config.
+https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/settlement/contracts/BaseSettlement.sol#L88-L126
+
+
+3. The ReceivedCrossChainTx struct is incorrectly updating the to_handler field with address(this) instead of the actual to_handler parameter.https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/settlement/contracts/ChakraSettlement.sol#L211
+
+
+4. The BurnUnlock and LockMint modes in the ChakraSettlementHandler contract allow for unconstrained changes to the token supply across chains. In BurnUnlock mode, tokens are burned on the source chain (_erc20_burn(msg.sender, amount)) and unlocked on the destination chain (_erc20_unlock(AddressCast.to_address(transfer_payload.to), transfer_payload.amount)), decreasing their total supply across chains. Conversely, in LockMint mode, tokens are locked on the source chain (_erc20_lock(msg.sender, address(this), amount)) and minted on the destination chain (_erc20_mint(AddressCast.to_address(transfer_payload.to), transfer_payload.amount)). These operations lack any supply caps or rate limiting mechanisms, potentially leading to significant and uncontrolled alterations in the total token supply across all connected chains.Example ref: 
+https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/ChakraSettlementHandler.sol#L340 and https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/ChakraSettlementHandler.sol#L128 for LockMint case
+
+5. The _Settlement_init and _Settlement_handler_init functions in BaseSettlement and BaseSettlementHandler should not have public visibility. Although they are called through initializer-protected methods in ChakraSettlement and ChakraSettlementHandler, their public accessibility is unnecessary and potentially risky. Changing these functions to internal visibility would improve contract security without affecting functionality.https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/BaseSettlementHandler.sol#L120 and https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/settlement/contracts/BaseSettlement.sol#L61
+
+
+6. The ChakraSettlementHandler contract contains a design flaw in its MintBurn mode, where tokens are locked before being burned in a later callback. This sequence creates a significant risk: if the contract is mistakenly configured with non-burnable tokens, it can lead to funds becoming permanently locked in the contract, resulting in irretrievable asset loss. Upfront check for token will help mitigating this.https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/ChakraSettlementHandler.sol#L123-L124
+
+7. The ChakraSettlementHandler contract fails to fully enforce an important invariant in its cross-chain ERC20 settlement process. While the invariant stipulates that "Cross-chain ERC20 settlements can only be initiated with a valid amount (greater than 0), a valid recipient address, a valid handler address, and a valid token address," it only partially implements these checks. The function cross_chain_erc20_settlement correctly verifies that the amount is greater than zero, but it merely checks for non-zero values for the recipient, handler, and token addresses. This approach is insufficient, as it allows potentially invalid addresses to pass through, risking erroneous transfers or interactions with non-existent or incorrect contracts.https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/solidity/handler/contracts/ChakraSettlementHandler.sol#L118-L121
+
+8. The ChakraSettlementHandler and related contracts lack rescue functions, risking permanent asset lock-up if tokens are sent by mistake or due to logical errors. This vulnerability is exacerbated by the complex cross-chain settlement process, potentially leading to irretrievable losses. Since the contracts are upgradeable, this might not be a permanent lockup.
+
+9. The ChakraSettlement contract's transaction ID (txid) generation process is vulnerable to potential collisions due to its use of abi.encodePacked with chain names. In specific scenarios, different combinations of chain names could produce identical packed data, leading to the same txid if other components match. This is a improbable scenario but including a delimiter between chain names is ideal.
+
+
+10. The Cairo version lacks crucial input validation. It should verify that the amount is greater than zero, and that the recipient address, handler address, and token address are all valid (non-zero). These checks are essential for preventing invalid transactions and potential security vulnerabilities.
+https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/cairo/handler/src/handler_erc20.cairo#L167-L169
+
+11. The Cairo implementation doesn't appear to use safe transfer methods or check balances before transfers. It should verify the sender has sufficient balance and use transfer functions that return a success boolean, asserting on the result. This helps prevent unexpected behavior and ensures token operations are executed safely.https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/cairo/handler/src/handler_erc20.cairo#L174
+
+12. There are a number of difference between cairo and solidity implementation around validations and it will be better if they are standardized. For example -- cairo implementation check for transfer ERC method in payload with solidity doesnot. `            assert(transfer.method_id == ERC20Method::TRANSFER, 'ERC20Method must TRANSFER');
+`https://github.com/code-423n4/2024-08-chakra/blob/d0d45ae1d26ca1b87034e67180fac07ce9642fd9/cairo/handler/src/handler_erc20.cairo#L122C42-L122C63
