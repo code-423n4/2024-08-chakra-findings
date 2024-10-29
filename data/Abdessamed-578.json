@@ -1,0 +1,10 @@
+{
+  "contest": 432,
+  "handle": "Abdessamed",
+  "risk": "3",
+  "title": "Incorrect settlement mode used on the destination chain",
+  "issueId": 578,
+  "issueUrl": "https://github.com/code-423n4/2024-08-chakra-findings/issues/578",
+  "originalIssueId": 38,
+  "originalIssueUrl": "https://github.com/code-423n4/2024-08-chakra-validation/issues/38"
+}
